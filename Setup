@@ -1,0 +1,21 @@
+guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/
+
+INSTALL boost 1.60
+
+1. download Boost from http://www.boost.org/ and extract the folders to ~/PCL_Dependencies/
+
+In the terminal do the following for boost_iostream library
+sudo apt-get install zlib1g-dev libbz2-dev
+
+then navigate to and install Boost
+cd boost_1_60_0
+./bootstrap.sh
+sudo ./b2 install
+
+INSTALL opengl
+sudo apt-get install build-essential libgl1-mesa-dev mesa-utils
+sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev
+
+
+
+
