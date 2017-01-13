@@ -78,7 +78,7 @@ sudo apt-get install libqhull-dev libqhull-doc
 sudo apt-get install libopenni2-dev libopenni2-0 openni2-doc
 ```
 ##----INSTALL Additional Libraries
-#libusb needed for openni   
+###libusb needed for openni   
 ```
 sudo apt-get install libusb-1.0-0-dev   
 ```
