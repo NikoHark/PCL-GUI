@@ -85,7 +85,9 @@ sudo apt-get install libusb-1.0-0-dev
 ##----INSTALL pcl 1.8   
 download pcl from https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.8.0   
 extract pcl to you home directory and rename to pcl-1.x.x   
-navigate to where you saved pcl and type the following to install:   
+NOTE: installing curses cmake will make options easier to edit.   
+      If VTK was not found remember to set -DVTK_DIR to your VTK build directory.    
+navigate to where you saved pcl and type the following to install:  
 ```
 cd pcl
 mkdir build && cd build
