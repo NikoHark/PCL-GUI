@@ -61,6 +61,10 @@ cmake -DVTK_QT_VERSION:STRING=5 \
 ```
 Make sure you replace /home/hsean/Qt/5.7 with where you installed Qt.   
 Also, Qt/5.x must be the version you are using.   
+then build VTK:
+```
+make 
+```
 ##----INSTALL eigen and flann libraries   
 ```
 sudo apt-get install libeigen3-doc libeigen3-dev libflann-dev
@@ -73,8 +77,14 @@ sudo apt-get install libqhull-dev libqhull-doc
 ```
 sudo apt-get install libopenni2-dev libopenni2-0 openni2-doc
 ```
+##----INSTALL Additional Libraries
+#libusb needed for openni   
+```
+sudo apt-get install libusb-1.0-0-dev   
+```
 ##----INSTALL pcl 1.8   
 download pcl from https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.8.0   
+extract pcl to you home directory and rename to pcl-1.x.x   
 navigate to where you saved pcl and type the following to install:   
 ```
 cd pcl
