@@ -59,7 +59,8 @@ cmake -DVTK_QT_VERSION:STRING=5 \
 -DQt5WebKitWidgets_DIR:STRING=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets \
 ../VTK
 ```
-Make sure you replace /home/pendar/Qt/ whith where you installed Qt   
+Make sure you replace /home/pendar/Qt/ with where you installed Qt.
+Also, Qt/5.x must be the version you are using.
 ##----INSTALL eigen and flann libraries   
 ```
 sudo apt-get install libeigen3-doc libeigen3-dev libflann-dev
