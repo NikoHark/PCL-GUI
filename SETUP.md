@@ -1,3 +1,4 @@
+#HOW TO INSTALL PCL 1.60 WITH QT 5 SUPPORT
 guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/   
 
 ##----INSTALL boost 1.60
@@ -6,7 +7,7 @@ In the terminal do the following for boost_iostream library
 ```
 sudo apt-get install zlib1g-dev libbz2-dev
 ```
-then navigate to and install Boost   
+then navigate to where you extracted boost and type the following:   
 ```
 cd boost_1_60_0
 ./bootstrap.sh
@@ -17,7 +18,7 @@ sudo ./b2 install
 sudo apt-get install build-essential libgl1-mesa-dev mesa-utils
 sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev
 ```
-###CHECK SETUP   
+###Check that everything was setup correctly 
 ```
 glxinfo | grep opengl
 ```
