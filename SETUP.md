@@ -33,12 +33,14 @@ sudo reboot
 ##----INSTALL Qt 5.0   
 Use the online installer at https://www.qt.io/download/   
 ##----INSTALL vtk   
-clone from git repo:   
+change directories and clone from git repo:   
 ```
+cd ~/PCL_Dependencies
 git clone https://github.com/Kitware/VTK.git
 ```
 switch vtk to version 6 to work with Qt5   
 ```
+cd VTK
 git checkout 21df122f4186aec9baae298bfc35b5a380869748
 ```
 then install the qt5webkitwidget which is required by vtk for qt support   
