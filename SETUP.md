@@ -77,6 +77,18 @@ sudo apt-get install libqhull-dev libqhull-doc
 ```
 sudo apt-get install libopenni2-dev libopenni2-0 openni2-doc
 ```
+##----INSTALL gtest
+This is needed to prevent an error when building PCL with VTK  
+```
+sudo apt-get install libgtest-dev
+cd /usr/src/gtest
+sudo mkdir build && cd build
+sudo cmake ..
+sudo make
+
+# copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
+sudo cp *.a /usr/lib
+```
 ##----INSTALL Additional Libraries
 ###libusb needed for openni   
 ```
