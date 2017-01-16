@@ -106,4 +106,7 @@ mkdir build && cd build
 cmake ..
 make -j2
 ```
+If you come accross "internal compiler error: killed (program cc1plus)" follow the   
+link to solve the problem: https://bitcointalk.org/index.php?topic=304389.0  
+
 That’s it, now you can enjoy PCL.   
