@@ -30,8 +30,12 @@ sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
 sudo reboot
 ```
-##----INSTALL Qt 5.0   
-Use the online installer at https://www.qt.io/download/   
+##----INSTALL Qt 5.6   
+Use the online installer at https://www.qt.io/download/  
+Note: Qt 5.7s makefile has been altered in such a way that PCL 1.8 and VTK 6.3    
+      will be unable to find QWidget.  The two solutions to this problem are to  
+      use VTK 7.0 or Qt 5.6.  At this time I have not tested if PCL 1.8 and    
+      VTK 7.0 play nicely together.   
 ##----INSTALL vtk   
 change directories and clone from git repo:   
 ```
