@@ -63,7 +63,7 @@ cmake -DVTK_QT_VERSION:STRING=5 \
 -DQt5WebKitWidgets_DIR:STRING=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets \
 .. 
 ```
-Make sure you replace /home/hsean/Qt/5.7 with where you installed Qt.   
+Make sure you replace /home/hsean/Qt/5.6 with where you installed Qt.   
 Also, Qt/5.x must be the version you are using.   
 then build VTK:
 ```
