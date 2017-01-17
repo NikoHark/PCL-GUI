@@ -1,4 +1,4 @@
-#HOW TO INSTALL PCL 1.60 WITH QT 5 SUPPORT
+#HOW TO INSTALL PCL 1.8 WITH QT SUPPORT
 guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/   
 
 ##----INSTALL boost 1.60
