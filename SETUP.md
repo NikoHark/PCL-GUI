@@ -56,9 +56,9 @@ so now we need to run cmake by specifying the path to this installation.
 ```
 mkdir vtk-build && cd vtk-build
 cmake -DVTK_QT_VERSION:STRING=5 \
--DQT_QMAKE_EXECUTABLE:PATH=/home/hsean/Qt/5.7/gcc_64/bin/qmake \
+-DQT_QMAKE_EXECUTABLE:PATH=/home/hsean/Qt/5.6/gcc_64/bin/qmake \
 -DVTK_Group_Qt:BOOL=ON \
--DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.7/gcc_64/lib/cmake \
+-DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.6/gcc_64/lib/cmake \
 -DBUILD_SHARED_LIBS:BOOL=ON \
 -DQt5WebKitWidgets_DIR:STRING=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets \
 .. 
