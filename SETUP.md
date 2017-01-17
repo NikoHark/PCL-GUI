@@ -103,7 +103,7 @@ navigate to where you saved pcl and type the following to install:
 ```
 cd pcl
 mkdir build && cd build
-cmake ..
+cmake .. (or ccmake .. if using curses)
 make -j2
 ```
 If you come accross "internal compiler error: killed (program cc1plus)" follow the   
