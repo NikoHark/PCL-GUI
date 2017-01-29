@@ -1,6 +1,15 @@
 #HOW TO INSTALL PCL 1.8 WITH QT SUPPORT
 guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/   
 
+##----INSTALL SOME NECESSITIES
+```
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install git
+sudo apt get intsall cmake
+sudo apt-get install cmake-curses-gui 
+```
+
 ##----INSTALL boost 1.60
 download Boost from http://www.boost.org/ and extract the folders to ~/PCL_Dependencies/   
 In the terminal do the following for boost_iostream library   
