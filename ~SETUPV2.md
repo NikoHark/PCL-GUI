@@ -72,7 +72,7 @@ Make sure you replace /home/hsean/Qt/5.7 with where you installed Qt.
 Also, Qt/5.x must be the version you are using.   
 
 NOTE: for Qt5.8 -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake is now   
-                -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/Qt5   
+                -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake/Qt5    
                 
 then build VTK:
 ```
