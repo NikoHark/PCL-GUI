@@ -43,6 +43,10 @@ sudo reboot
 ##----INSTALL Qt 5.7   
 Use the online installer at https://www.qt.io/download/  
 
+To run the installer you must first change the file permissions      
+```   
+chmod 755 <path to Qt Downloader>   
+```   
 
 
 ##----INSTALL vtk 7.1   
