@@ -10,7 +10,7 @@ sudo apt get intsall cmake
 sudo apt-get install cmake-curses-gui 
 ```
 
-##----INSTALL boost 1.60
+##----INSTALL boost 1.63
 download Boost from http://www.boost.org/ and extract the folders to ~/PCL_Dependencies/   
 In the terminal do the following for boost_iostream library   
 ```
@@ -18,7 +18,7 @@ sudo apt-get install zlib1g-dev libbz2-dev
 ```
 then navigate to where you extracted boost and type the following:   
 ```
-cd boost_1_60_0
+cd boost_1_63_0
 ./bootstrap.sh
 sudo ./b2 install
 ```
