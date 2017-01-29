@@ -68,7 +68,7 @@ cmake -DVTK_QT_VERSION:STRING=5 \
 -DQt5WebKitWidgets_DIR:STRING=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets \
 .. 
 ```
-Make sure you replace /home/hsean/Qt/5.6 with where you installed Qt.    
+Make sure you replace /home/hsean/Qt/5.7 with where you installed Qt.    
 Also, Qt/5.x must be the version you are using.   
 then build VTK:
 ```
@@ -98,10 +98,14 @@ sudo make
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 sudo cp *.a /usr/lib
 ```
-##----INSTALL Additional Libraries
-###libusb needed for openni   
+##----INSTALL Additional Libraries 
 ```
-sudo apt-get install libusb-1.0-0-dev   
+sudo apt-get install libusb-1.0-0-dev libusb-dev libudev-dev   
+sudo apt-get install freeglut3-dev pkg-config 
+sudo apt-get install mpi-default-dev openmpi-bin openmpi-common
+sudo apt-get install libxmu-dev libxi-dev 
+sudo apt-get install mono-complete
+sudo apt-get install openjdk-8-jdk openjdk-8-jre
 ```
 ##----INSTALL pcl 1.8   
 download pcl from https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.8.0   
