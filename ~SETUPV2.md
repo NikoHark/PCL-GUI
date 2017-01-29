@@ -1,5 +1,6 @@
 #HOW TO INSTALL PCL 1.8 WITH QT SUPPORT
-guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/   
+guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/  
+additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-Ubuntu-16-04-td4043733.html 
 
 ##----INSTALL SOME NECESSITIES
 ```
@@ -39,40 +40,35 @@ sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
 sudo reboot
 ```
-##----INSTALL Qt 5.6   
+##----INSTALL Qt 5.7   
 Use the online installer at https://www.qt.io/download/  
-Note: Qt 5.7s makefile has been altered in such a way that PCL 1.8 and VTK 6.3    
-      will be unable to find QWidget.  The two solutions to this problem are to  
-      use VTK 7.0 or Qt 5.6.  At this time I have not tested if PCL 1.8 and    
-      VTK 7.0 play nicely together.   
-##----INSTALL vtk   
-change directories and clone from git repo:   
+
+
+
+##----INSTALL vtk 7.1   
+
+Install dependency:     
 ```
-cd ~/PCL_Dependencies
-git clone https://github.com/Kitware/VTK.git
+sudo apt -y install libxt-dev
 ```
-switch vtk to version 6 to work with Qt5   
+Get source files using command:
 ```
-cd VTK
-git checkout 21df122f4186aec9baae298bfc35b5a380869748
+wget http://www.vtk.org/files/release/7.1/VTK-7.1.0.tar.gz
 ```
-then install the qt5webkitwidget which is required by vtk for qt support   
+Extract the file to ~/PCL_Dependencies   
+Next we need to run cmake by specifying the path to this installation.   
 ```
-sudo apt-get install libqt5webkit5 libqt5webkit5-dev
-```
-This installs Qt5 webkitwidget in /usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets   
-so now we need to run cmake by specifying the path to this installation.   
-```
+cd ~/PCL_Dependencies/VTK-7.1.0   
 mkdir vtk-build && cd vtk-build
 cmake -DVTK_QT_VERSION:STRING=5 \
--DQT_QMAKE_EXECUTABLE:PATH=/home/hsean/Qt/5.6/gcc_64/bin/qmake \
+-DQT_QMAKE_EXECUTABLE:PATH=/home/hsean/Qt/5.7/gcc_64/bin/qmake \
 -DVTK_Group_Qt:BOOL=ON \
--DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.6/gcc_64/lib/cmake \
+-DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.7/gcc_64/lib/cmake \
 -DBUILD_SHARED_LIBS:BOOL=ON \
 -DQt5WebKitWidgets_DIR:STRING=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets \
 .. 
 ```
-Make sure you replace /home/hsean/Qt/5.6 with where you installed Qt.   
+Make sure you replace /home/hsean/Qt/5.6 with where you installed Qt.    
 Also, Qt/5.x must be the version you are using.   
 then build VTK:
 ```
