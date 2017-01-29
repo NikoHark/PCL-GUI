@@ -1,6 +1,7 @@
 #HOW TO INSTALL PCL 1.8 WITH QT SUPPORT
 guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubuntu/  
-additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-Ubuntu-16-04-td4043733.html 
+additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-Ubuntu-16-04-td4043733.html    
+PCL Compilation and Dependencies: http://pointclouds.org/documentation/tutorials/compiling_pcl_posix.php   
 
 ##----INSTALL SOME NECESSITIES
 ```
