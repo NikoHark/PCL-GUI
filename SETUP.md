@@ -79,9 +79,10 @@ Also, Qt/5.x must be the version you are using.
 NOTE: for Qt5.8 -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake is now   
                 -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake/Qt5    
                 
-then build VTK:
+then build and install VTK:
 ```
-make 
+make -j2
+make -j2 install
 ```
 ##----INSTALL eigen and flann libraries   
 ```
@@ -127,6 +128,7 @@ cd pcl
 mkdir build && cd build
 cmake .. (or ccmake .. if using curses)
 make -j2
+make -j2 install
 ```
 If you come accross "internal compiler error: killed (program cc1plus)" follow the   
 link to solve the problem: https://bitcointalk.org/index.php?topic=304389.0  
