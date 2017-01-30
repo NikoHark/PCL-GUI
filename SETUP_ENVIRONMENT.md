@@ -113,6 +113,12 @@ sudo apt -y install libxt-dev
 Get source files from http://www.vtk.org/download/
 
 Extract the file to ~/PCL_Dependencies   
+Then we need to install qt5webkitwidget, which is required by vtk qt support.   
+```
+sudo apt-get install libqt5webkit5 libqt5webkit5-dev
+```
+sudo apt-get install libqt5webkit5 libqt5webkit5-dev   
+
 Next we need to run cmake by specifying the path to this installation.   
 ```
 cd ~/PCL_Dependencies/VTK-6.3.0   
