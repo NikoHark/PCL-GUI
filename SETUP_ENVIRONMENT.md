@@ -7,19 +7,19 @@ PCL Compilation and Dependencies: http://pointclouds.org/documentation/tutorials
 ###Dependencies   
 Boost 1.60   
 Eigen 3.3.2   
-FLANN 1.8
-QHULL
-VTK 6.3
-USB 1.0
-OpenNI2   
-Qt 5.6 
+FLANN 1.8   
+QHULL   
+VTK 6.3   
+USB 1.0   
+OpenNI2    
+Qt 5.6   
   
-###Additional
-cmake & cmake-gui
-git
+###Additional   
+cmake & cmake-gui   
+git   
    
-###Main
-pcl 1.8
+###Main   
+pcl 1.8   
   
 
 ##----INSTALL SOME NECESSITIES
