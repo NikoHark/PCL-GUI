@@ -22,3 +22,6 @@ CMakeLists.txt has been altered to fix the errors mentioned above
 [ADDITIONAL CMakeLists changes]
 link to thread:
 http://vtk.1045678.n5.nabble.com/Linker-problem-using-VTK-CMake-and-Qt-td5732590.html
+
+this really helped me understand the problem:
+http://www.pcl-users.org/Build-PCL-QT5-and-VTK-6-1-td4037631.html

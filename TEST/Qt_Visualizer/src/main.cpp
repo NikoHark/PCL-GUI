@@ -1,6 +1,7 @@
 #include "pclviewer.h"
 #include <QApplication>
 #include <QMainWindow>
+#include <QWidget>
 
 int main (int argc, char *argv[])
 {
