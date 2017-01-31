@@ -3,22 +3,23 @@ guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubu
 additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-Ubuntu-16-04-td4043733.html    
 PCL Compilation and Dependencies: http://pointclouds.org/documentation/tutorials/compiling_pcl_posix.php   
 
+##README
+The guide details how to set up the development environment for the PCL-GUI.
+This setup was tested on Ubuntu 16.04 using VMware, and thus could only use 
+OpenGL 1 & 2 without harware acceleration.  See the VTK 7 setup guide if your 
+graphics driver supports OpenGL 3.0+.
+
 ##----SOFTWARE
-###Dependencies   
+cmake & cmake-gui   
+git   
+USB 1.0   
+OpenNI2   
 Boost 1.60   
 Eigen 3.3.2   
 FLANN 1.8   
-QHULL   
-VTK 6.3   
-USB 1.0   
-OpenNI2    
+QHULL  
 Qt 5.6   
-  
-###Additional   
-cmake & cmake-gui   
-git   
-   
-###Main   
+VTK 6.3       
 pcl 1.8   
   
 
@@ -44,15 +45,18 @@ sudo apt-get install openjdk-8-jdk openjdk-8-jre
 ##----INSTALL eigen and flann libraries   
 ```
 sudo apt-get install libeigen3-doc libeigen3-dev libflann-dev
-```
+```  
+
 ##----INSTALL qhull   
 ```
 sudo apt-get install libqhull-dev libqhull-doc
-```
+```   
+
 ##----INSTALL OpenNI   
 ```
 sudo apt-get install libopenni2-dev libopenni2-0 openni2-doc
-```
+```   
+
 ##----INSTALL gtest
 This is needed to prevent an error when building PCL with VTK  
 ```
@@ -64,7 +68,7 @@ sudo make
 
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 sudo ln -s *.a /usr/lib
-```
+```   
 
 ##----INSTALL boost 1.60
 download Boost from http://www.boost.org/ and extract the folders to ~/PCL_Dependencies/   
@@ -77,16 +81,19 @@ then navigate to where you extracted boost and type the following:
 cd boost_1_60_0
 ./bootstrap.sh
 sudo ./b2 install
-```
+```   
+
 ##----INSTALL opengl   
 ```
 sudo apt-get install build-essential libgl1-mesa-dev mesa-utils
 sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev
-```
+```   
+
 ###Check that everything was setup correctly 
 ```
 glxinfo | grep opengl
-```
+```   
+
 if you get Error: couldn't find RGB GLX visual or fbconfig ubuntu 12.04 error   
 Do the following:   
 ```
@@ -94,7 +101,8 @@ sudo apt-get remove --purge xserver-xorg
 sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
 sudo reboot
-```
+```   
+
 ##----INSTALL Qt 5.6   
 Use the online installer at https://www.qt.io/download/  
 
@@ -103,23 +111,27 @@ To run the installer you must first change the file permissions
 chmod 755 <path to Qt Downloader>   
 ```   
 
-
 ##----INSTALL vtk 6.3   
 
 Install dependency:     
 ```
 sudo apt -y install libxt-dev
 ```
-Get source files from http://www.vtk.org/download/
-
-Extract the file to ~/PCL_Dependencies   
 Then we need to install qt5webkitwidget, which is required by vtk qt support.   
 ```
 sudo apt-get install libqt5webkit5 libqt5webkit5-dev
 ```
-sudo apt-get install libqt5webkit5 libqt5webkit5-dev   
+Clone the git repo for VTK
+```
+cd ~/PCL_Dependencies
+git clone https://github.com/Kitware/VTK.git
+```
+Next we need to switch to vtk 6.3
+```
+git checkout 21df122f4186aec9baae298bfc35b5a380869748
+```
 
-Next we need to run cmake by specifying the path to this installation.   
+After that run cmake by specifying the path to this installation.   
 ```
 cd ~/PCL_Dependencies/VTK-6.3.0   
 mkdir vtk-build && cd vtk-build
@@ -134,13 +146,14 @@ cmake -DVTK_QT_VERSION:STRING=5 \
 Make sure you replace /home/hsean/Qt/5.6 with where you installed Qt.    
 Also, Qt/5.x must be the version you are using.   
 
-NOTE: for Qt5.8 -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake is now   
-                -DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake/Qt5    
+NOTE: for Qt5.8    
+-DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake is now   
+-DCMAKE_PREFIX_PATH:PATH=/home/hsean/Qt/5.8/gcc_64/lib/cmake/Qt5    
                 
 then build and install VTK:
 ```
 make -j2
-make -j2 install
+sudo make -j2 install
 ```
 ##----INSTALL pcl 1.8   
 download pcl from https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.8.0   
@@ -153,7 +166,7 @@ cd pcl
 mkdir build && cd build
 cmake .. (or ccmake .. if using curses)
 make -j2
-make -j2 install
+sudo make -j2 install
 ```
 If you come accross "internal compiler error: killed (program cc1plus)" follow the   
 link to solve the problem: https://bitcointalk.org/index.php?topic=304389.0  
