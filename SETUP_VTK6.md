@@ -4,10 +4,10 @@ additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-U
 PCL Compilation and Dependencies: http://pointclouds.org/documentation/tutorials/compiling_pcl_posix.php   
 
 ##README
-The guide details how to set up the development environment for the PCL-GUI.
-This setup was tested on Ubuntu 16.04 using VMware, and thus could only use 
-OpenGL 1 & 2 without harware acceleration.  See the VTK 7 setup guide if your 
-graphics driver supports OpenGL 3.0+.
+The guide details how to set up the development environment for the PCL-GUI.    
+This setup was tested on Ubuntu 16.04 using VMware, and thus could only use    
+OpenGL 1 & 2 without harware acceleration.  See the VTK 7 setup guide if your   
+graphics driver supports OpenGL 3.0+.    
 
 ##----SOFTWARE
 cmake & cmake-gui   
@@ -23,7 +23,7 @@ VTK 6.3
 pcl 1.8   
   
 
-##----INSTALL SOME NECESSITIES
+##----INSTALL SOME NECESSITIES    
 ```
 sudo apt-get update
 sudo apt-get install build-essential
@@ -32,7 +32,7 @@ sudo apt-get install cmake
 sudo apt-get install cmake-curses-gui 
 ```
 
-##----INSTALL SOME ADDITIONAL LIBRARIES
+##----INSTALL SOME ADDITIONAL LIBRARIES    
 ```
 sudo apt-get install libusb-1.0-0-dev libusb-dev libudev-dev   
 sudo apt-get install freeglut3-dev pkg-config 
@@ -42,7 +42,7 @@ sudo apt-get install mono-complete
 sudo apt-get install openjdk-8-jdk openjdk-8-jre
 ```
 
-##----INSTALL eigen and flann libraries   
+##----INSTALL eigen and flann libraries     
 ```
 sudo apt-get install libeigen3-doc libeigen3-dev libflann-dev
 ```  
