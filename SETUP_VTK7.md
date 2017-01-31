@@ -3,6 +3,11 @@ guide source: https://robotract.com/2016/05/19/installing-pcl-qt5-and-vtk-on-ubu
 additional source: http://www.pcl-users.org/Endless-troubles-installing-PCL-on-Ubuntu-16-04-td4043733.html    
 PCL Compilation and Dependencies: http://pointclouds.org/documentation/tutorials/compiling_pcl_posix.php   
 
+##README
+This guide will only work on systems that are able to run OpenGL 3.0 or greater.    
+If you are trying to setup the PCL-GUI using an older system, or on a VM that   
+does not give access to your desktop's graphics card, follow the SETUP_VTK6 guide.   
+
 ##----INSTALL SOME NECESSITIES
 ```
 sudo apt-get update
