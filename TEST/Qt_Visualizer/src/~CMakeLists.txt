@@ -12,12 +12,7 @@ add_definitions     (${PCL_DEFINITIONS})
 set  (project_SOURCES main.cpp pclviewer.cpp)
 set  (project_HEADERS pclviewer.h)
 set  (project_FORMS   pclviewer.ui)
-
-if(VTK_LIBRARIES)
-  target_link_libraries(${VTK_LIBRARIES})
-else()
-  target_link_libraries(vtkHybrid vtkWidgets)
-endif()
+set  (VTK_LIBRARIES   vtkRendering vtkGraphics vtkHybrid QVTK)
 
 QT5_WRAP_CPP (project_HEADERS_MOC   ${project_HEADERS})
 QT5_WRAP_UI  (project_FORMS_HEADERS ${project_FORMS})

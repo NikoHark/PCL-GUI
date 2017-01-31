@@ -18,3 +18,7 @@ http://stackoverflow.com/questions/28252909/cmake-and-qt5-include-only-takes-one
 [RESULTS]
 
 CMakeLists.txt has been altered to fix the errors mentioned above
+
+[ADDITIONAL CMakeLists changes]
+link to thread:
+http://vtk.1045678.n5.nabble.com/Linker-problem-using-VTK-CMake-and-Qt-td5732590.html

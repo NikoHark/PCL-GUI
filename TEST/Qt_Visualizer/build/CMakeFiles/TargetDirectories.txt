@@ -1,3 +1,0 @@
-/home/hsean/PCL-GUI/TEST/Qt_Visualizer/build/CMakeFiles/edit_cache.dir
-/home/hsean/PCL-GUI/TEST/Qt_Visualizer/build/CMakeFiles/rebuild_cache.dir
-/home/hsean/PCL-GUI/TEST/Qt_Visualizer/build/CMakeFiles/pcl_visualizer.dir
