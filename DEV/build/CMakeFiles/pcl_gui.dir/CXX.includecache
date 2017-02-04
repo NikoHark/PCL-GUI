@@ -23,6 +23,10 @@ QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
 -
+QtWidgets/QGridLayout
+-
+QtWidgets/QHBoxLayout
+-
 QtWidgets/QHeaderView
 -
 QtWidgets/QLCDNumber
@@ -34,6 +38,8 @@ QtWidgets/QMainWindow
 QtWidgets/QPushButton
 -
 QtWidgets/QSlider
+-
+QtWidgets/QVBoxLayout
 -
 QtWidgets/QWidget
 -
@@ -1174,6 +1180,14 @@ qbuttongroup.h
 qfiledialog.h
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qfiledialog.h
 
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QGridLayout
+qgridlayout.h
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qgridlayout.h
+
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QHBoxLayout
+qboxlayout.h
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qboxlayout.h
+
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QHeaderView
 qheaderview.h
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qheaderview.h
@@ -1197,6 +1211,10 @@ qpushbutton.h
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QSlider
 qslider.h
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qslider.h
+
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QVBoxLayout
+qboxlayout.h
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qboxlayout.h
 
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/QWidget
 qwidget.h
@@ -1274,6 +1292,14 @@ QtWidgets/qdesktopwidget.h
 QtGui/qguiapplication.h
 -
 
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qboxlayout.h
+QtWidgets/qlayout.h
+-
+QtWidgets/qwidget.h
+-
+limits.h
+-
+
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qbuttongroup.h
 QtCore/qobject.h
 -
@@ -1300,12 +1326,46 @@ QtWidgets/qdialog.h
 QtWidgets/qwidget.h
 -
 
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qgridlayout.h
+QtWidgets/qlayout.h
+-
+QtWidgets/qwidget.h
+-
+limits.h
+-
+
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qheaderview.h
 QtWidgets/qabstractitemview.h
 -
 
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qlabel.h
 QtWidgets/qframe.h
+-
+
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qlayout.h
+QtCore/qobject.h
+-
+QtWidgets/qlayoutitem.h
+-
+QtWidgets/qsizepolicy.h
+-
+QtCore/qrect.h
+-
+QtCore/qmargins.h
+-
+limits.h
+-
+QtWidgets/qboxlayout.h
+-
+QtWidgets/qgridlayout.h
+-
+
+/home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qlayoutitem.h
+QtWidgets/qsizepolicy.h
+-
+QtCore/qrect.h
+-
+limits.h
 -
 
 /home/hsean/Qt/5.6/gcc_64/include/QtWidgets/qlcdnumber.h
