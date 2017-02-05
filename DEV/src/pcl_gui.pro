@@ -13,8 +13,20 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        pclgui.cpp
+        pclgui.cpp \
+    form_pclfeatureslist.cpp \
+    form_pclviewer.cpp \
+    form_pclfeatureoptions.cpp \
+    form_pclselectedfeatures.cpp
 
-HEADERS  += pclgui.h
+HEADERS  += pclgui.h \
+    form_pclfeatureslist.h \
+    form_pclviewer.h \
+    form_pclfeatureoptions.h \
+    form_pclselectedfeatures.h
 
-FORMS    += pclgui.ui
+FORMS    += pclgui.ui \
+    form_pclfeatureslist.ui \
+    form_pclviewer.ui \
+    form_pclfeatureoptions.ui \
+    form_pclselectedfeatures.ui

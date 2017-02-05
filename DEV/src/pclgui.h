@@ -19,6 +19,12 @@
 // Visualization Toolkit (VTK)
 #include <vtkRenderWindow.h>
 
+// PCL-GUI
+#include<form_pclviewer.h>
+#include<form_pclselectedfeatures.h>
+#include<form_pclfeatureoptions.h>
+#include<form_pclfeatureslist.h>
+
 typedef pcl::PointXYZRGBA PointT;
 typedef pcl::PointCloud<PointT> PointCloudT;
 
